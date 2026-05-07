@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!-- Кочмарев Кирилл, 25ВП2, Лаба-3, в-12-->
+<html>
+    <head> 
+        <script src="js/script.js"></script>
+        <title> Конвертер л.с ↔ кН </title> 
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/horse_icon.jpg">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="header">
+            <p>Лабороторная 3<br>
+               Кочмарев Кирилл<br>
+               Группа 25ВП2<br>
+               В-12
+            </p>
+        </div>
+        
+        <div class="task">
+            <h2>Задание</h2>
+            <p>Конвертер мощности л.с ↔ кH<br>
+                (сконвертированные значения должны<br>
+                добавляться в таблицу на странице<br>
+                после выполнения конвертации).<br>
+            </p>
+        </div>
+        
+    <div class="result-block">
+        <h3>Результат конвертации</h3>
+        <p id="resultText">—</p>
+    </div>
+        
+        <div class="input-container">
+            <div class="input-container-polya">
+                <input type="number" id="inputValue" step="0.1" min="0"
+                    placeholder="Введите значение">
+                <select id="conversionType">
+                    <option value="hpToKn">л.с. → кН</option>
+                    <option value="knToHp">кН → л.с.</option>
+                </select>
+            </div>
+    <button onclick="convert()">Конвертировать</button>
+        </div>
+        
+        <div class="table-container">
+            <h3>История расчётов</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Входное значение</th>
+                            <th>Рассчет</th>
+                            <th>Результат</th>
+                        </tr>
+                    </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+  
+    </body>
+</html>
